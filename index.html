@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Joke of a blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;padding: 0;
+            font-family: 'Belanosima', sans-serif;
+font-family: 'Montserrat', sans-serif;
+
+        }
+        body{
+            height: 100%;
+            width: 100vw;
+            overflow-x: hidden;
+            /* overflow: scroll; */
+            background-color: rgb(240, 93, 93);
+        }
+        .wrapper{
+            background-color: blue;
+            height: 100%;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        header{
+            height: 90vh;
+            width: 100vw;
+            background-image: linear-gradient(180deg,rgba(0, 5, 12, 0.919),rgba(0, 0, 0, 0.756)), url(rick-bg.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-bottom: 3px dashed rgb(255, 255, 255);
+            
+
+            /* background-color: rgb(0, 5, 12); */
+
+            display: flex;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+        #dumbass{
+            width: 30%;
+            transition: .2s ease-in-out;
+            border-radius: 20px;
+            box-shadow: 12px 12px 0.1px black, -5px -5px 42px rgba(255, 255, 255, 0.173);
+            z-index: 1;
+        }
+        #dumbass:hover{
+            transform: scale(1.1);
+            box-shadow: 12px 12px .1px rgba(255, 2, 242, 0.5), -12px -12px .1px rgba(0, 145, 255, 0.6), 
+            12px -12px .1px rgba(255, 174, 0, 0.5), -12px 12px .1px rgba(255, 0, 0, 0.5), 0px 0px 200px cyan;
+            rotate: 3deg;
+        }
+        #dumbass:active{
+            transition: .2s;
+            transform: scale(0.9);
+            box-shadow: 12px 12px 35px rgba(14, 255, 207, 0.6), -12px -12px 75px rgba(0, 145, 255, 0.6), 
+            12px -12px 35px rgb(251, 0, 255), -12px 12px 35px rgb(255, 0, 0), 0px 0px 99px cyan;
+            rotate: 3deg;
+        }
+        #sxham{
+        color: white;
+        letter-spacing: 60px;
+        font-size: xxx-large;
+        position: absolute;
+        width: 100vw;
+        text-align: center;
+        text-shadow: 0px -30px 100px rgba(255, 255, 255, 0.413);
+        opacity: 30%;
+        z-index: 10;
+        }
+        .blog{
+            background-color: rgb(0, 9, 22);
+    height: 100vh;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.838),rgb(3, 33, 0)), url(https://media.giphy.com/media/VeN7tau74VbfG6hcfr/giphy.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    /* box-shadow: 0px -10px red; */
+    justify-content: center;
+    align-items: center;
+        }
+        .blog-post{
+            background-image: linear-gradient(40deg, rgba(0, 113, 154, 0.182),rgba(0, 200, 255, 0.137));
+            
+    border: 5px dashed white;
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+        }
+        .custom-cursor {
+
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      height: 100px; /* Adjust the height as needed */
+    }
+    .row{
+        display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(45deg,rgba(28, 53, 19, 0.925),rgba(0, 0, 0, 0.896)), url(rick-morty-roller.gif);
+    background-position: center;
+
+    border-bottom: 5px dashed white;
+    }
+    #portal{
+        width: 20%;
+    }
+    .center-box{
+        height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 5%;
+    }
+    .blog-title{
+        font-size: xxx-large;
+        color: white;
+        text-shadow: -5px 0px 25px rgba(0, 255, 0, 0.313),0px -5px 35px rgba(255, 255, 255, 0.49);
+    }
+    .blog-content{
+        /* background-color: red; */
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
+        /* padding: 10px; */
+        overflow-y: scroll;
+        color: white;
+        text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.614);
+
+    }
+    .blog-content::-webkit-scrollbar{
+        background-color: transparent;
+
+    }
+    .blog-content::-webkit-scrollbar-button{
+        background-color: rgb(0, 63, 3);
+        border-radius: 100%;
+        padding: 10px;
+        border: 2cm solid rgb(37, 255, 44);
+
+    }
+    .blog-content::-webkit-scrollbar-thumb{
+        background-color:rgb(0, 63, 12);
+        border-radius: 100%;
+
+
+        box-shadow: 0px 0px 30px rgb(0, 129, 2);
+        border-left: 4px dashed rgb(255, 255, 255);
+    }
+    .blog-content p{
+        padding: 10px;
+        font-weight: 200;
+        margin-bottom: 5px;
+    }
+    .blog-content pre{
+        padding: 10px;
+        margin-bottom: 5px;
+    }
+
+    </style>
+</head>
+<body onload="setCursor()">
+    <div class="wrapper">
+        <header>
+            <img id="dumbass" src="SMiLE.png" alt="S X H A M">
+            <h1 id="sxham"> S X H A M</h1>
+        </header>
+        <div class="blog">
+            <div class="blog-post">
+                <div class="row">
+                    <img id="portal" src="rick and morty portal.png" alt="">
+                    <div class="center-box">
+                    <h1 class="blog-title">Morty's Musings: Embracing Cosmic Absurdity with Rick</h1>
+                </div>
+                </div>
+                <div class="blog-content">
+                    *** NEEDS FIXING! SHITS SCUFFED ***
+<p>
+Alright, Morty, hold on tight 'cause we're diving into the deep cosmic realms of wisdom and humor. Listen up, kid: <br>
+</p><p>
+Life's like a fart, Morty. Sometimes it stinks, and other times it's just a passing breeze. But let me tell ya, the key to navigating this crazy universe is to embrace the absurdity and find joy in the little things. It's like finding a McDonald's in a parallel dimension, Morty. Sure, it might not be the healthiest choice, but damn if it doesn't satisfy that hunger for meaning.
+</p><p>
+You see, Morty, existence is a pickle. It's a conundrum wrapped in a puzzle, drenched in Szechuan sauce. We're all just floating in this cosmic brine, trying to figure out our place in the grand scheme of things. So, grab your portal gun and hop on board, Morty, 'cause the journey is what counts.
+</p><p>
+Remember, Morty, even when life gets as dark as Rick's soul, there's always a glimmer of light. It's like finding a shiny nugget in a pile of Plutonian dung. So, buckle up and face the unknown with a burp and a belch, 'cause life's too short to take seriously. Just laugh at the cosmic joke and keep on Rickin'! Wubba lubba dub dub!
+</p>
+                    <pre>
+ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠀⠠⠀⠐⠐⠒⠒⣲⣂⠤⠄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠠⠐⠈⠀⢀⠀⣀⡄⠀⠠⣀⣄⢀⠾⣜⠥⡪⣧⡀⠑⠀⠠⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠄⠊⠠⢀⠠⠐⠨⣐⠉⠁⠀⠀⠀⠑⠪⡍⢕⣢⠽⠚⠃⠀⠄⠠⢀⠀⠀⠀⠀⠂⠄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠠⠐⠈⠀⠐⢀⠞⣴⣀⠔⢋⣎⠇⠀⠀⢀⣀⣀⠀⡶⠺⢢⡄⠀⠂⠁⠐⡀⠂⢈⠠⠁⡈⠐⠤⣀⠁⠂⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠂⠀⠀⡀⠁⣌⡀⠺⠀⠟⠁⠀⠼⠬⠤⠤⣀⠃⠀⢈⠇⡇⠀⣸⡆⠀⠠⠐⠀⠀⠀⡀⠀⠂⠄⠂⡀⢀⠉⠂⢄⠁⠠⡀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⡀⠂⠄⢁⠀⠂⢣⢉⡣⢶⡮⠕⡒⢄⢀⣠⠚⠉⠡⠀⠞⢰⠀⠀⣇⠇⠀⠀⠀⠀⠀⠀⠀⠀⠠⡐⢤⡐⠠⠀⠡⠀⡑⢄⠈⠄⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠊⡠⢀⠐⠠⠈⠀⠀⠐⡖⡻⢍⠁⢬⠭⠁⠈⡆⠉⠒⣢⡄⠀⠀⡼⠀⢰⠹⠀⠑⠠⡀⢀⡠⣄⣀⠀⢰⠁⠈⡽⠀⠈⠄⠂⢄⡈⢆⠈⠄⠀⠀⠀⠀
+⠀⠀⠠⠃⠰⠁⠀⠄⠀⡐⠀⠀⢀⢽⡈⢀⠿⡈⢁⡸⠀⡇⢴⠊⠁⠀⠀⢀⠃⠀⣎⠇⠀⠀⠀⠈⠲⡉⠀⢙⡆⠀⢀⠐⠇⠀⠠⠀⠀⠀⠈⢆⢢⠈⠄⠀⠀⠀
+⠀⢀⠃⢠⠃⢀⠃⣀⠄⠀⢀⠀⠘⠿⡤⢸⡸⠘⠿⣟⠻⢇⠀⣣⣄⠀⢀⠜⠀⣸⡻⠀⣀⠜⠠⡀⠀⠘⢀⡼⠀⠀⠀⠘⠀⠀⠀⠀⠀⠀⠀⠸⠘⡄⠘⡀⠀⠀
+⠀⡄⠀⠃⢠⣖⠟⢍⢳⢉⢶⠀⠀⢰⣿⣾⣶⣾⣿⣿⣶⠊⢫⡉⢀⠔⠃⢀⢴⠕⠁⠀⣏⠀⢀⠇⠀⠀⠈⠀⠀⠠⠀⠀⠀⠀⠀⠁⢀⠀⠠⠐⢀⠘⡀⢁⠀⠀
+⢠⠀⠈⠀⡟⢄⠀⠈⢢⠹⣅⠀⠀⠈⠻⡻⠿⠟⠛⣹⣧⡯⠅⠊⠁⣀⣴⠟⠁⠀⠀⠀⠀⠉⠁⠀⠀⠀⠀⠀⠀⠀⠄⠂⠀⠀⠀⠂⠀⠀⠄⠂⡀⠂⡇⢸⡀⠀
+⠀⠀⠄⡱⠁⠈⢦⣐⣄⠡⣸⡆⠠⠐⢦⡈⡡⠾⣍⣹⠠⠀⠠⣔⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⠀⠀⠀⠀⠄⠂⠁⠀⠀⠀⠀⠀⡐⠀⢰⠀⡆⠀
+⡇⠀⠄⡇⠀⠀⣦⣿⣽⡫⠻⣄⠁⢀⡜⡘⢠⡈⡇⠀⡄⢃⠀⡟⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢔⣯⣷⡯⠿⢿⣷⣤⡀⠀⢀⠀⠂⠁⠀⠀⠀⢆⠈⠘⡄⢸⠁
+⠇⠀⠘⡄⠀⠀⠘⢞⣡⣡⡼⣧⡈⠉⢠⠃⠠⣇⣅⠀⢣⠔⡁⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⣯⡿⠋⢀⣀⡀⢠⣀⣙⣿⠀⠀⡄⠀⠠⠀⠀⠀⠈⢦⠁⠃⠈⡄
+⠆⠀⠂⢣⠀⠀⠀⠀⠀⠺⡉⠈⢷⣄⡸⠀⢸⣎⠘⠀⠘⡀⡃⠘⣼⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠇⠎⠀⠒⢱⢇⠘⢂⢼⢧⠀⠈⠀⠀⡀⠀⠀⠀⠀⢳⠀⠀⡇
+⠀⠀⠂⠈⠧⠀⠀⢰⠎⢳⡈⢂⡀⠈⠃⢀⣇⠛⣦⡇⠀⢣⠃⠀⡏⡄⠀⠀⠀⠀⠀⠀⠀⠈⢿⠃⠈⠐⠒⠁⠛⠉⠀⢸⣺⠀⠀⠀⢀⠀⡀⣀⠀⠀⠀⠃⠀⡃
+⢸⠀⠈⠠⠑⠀⠀⠸⠀⠠⠇⠀⠈⠢⠄⢼⠊⠀⡇⢁⠀⠈⡄⠀⢹⠇⠀⠀⠀⠀⠀⠀⠀⠀⠈⢉⠦⣀⠐⠉⠉⢁⣴⡳⠁⠀⠀⠠⢠⡟⠉⠑⢱⠀⠀⠌⠀⡅
+⢸⠀⠀⡁⠐⠀⠠⠀⠈⠁⠀⠀⠀⡀⠀⠀⠀⠀⢣⢸⠀⠀⠰⡀⢸⢠⠀⠀⠀⠀⠀⠀⠀⠀⡠⠊⠀⡀⠈⠉⠉⠘⣦⠀⠀⠀⠐⠀⢸⠁⠀⠠⠏⠀⢰⠃⢀⡇
+⠘⡀⠀⠄⠁⡐⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⢸⣶⣒⣶⣧⠀⣾⠀⠀⠀⠀⠀⠀⠀⡰⠁⢠⠊⠀⠀⠀⢀⠂⢳⠇⠀⠀⠂⠀⠘⠑⠒⠁⠀⢀⢞⠀⣸⠇
+⠀⠇⠀⡈⠄⠀⠀⠀⢁⢴⠲⣤⡀⠁⠀⠀⠀⠀⣦⣟⣾⠓⠚⣯⢧⡇⡀⠀⠀⠀⠀⢠⢲⠉⣱⡏⠀⠀⠀⠀⢸⡤⢼⡒⠀⠀⠄⠂⠀⢀⠀⠀⡖⠉⡄⢀⠇⠀
+⠀⠸⠀⢣⠐⡆⠀⠀⢸⠃⠀⠀⣿⠀⠀⠁⠀⢠⣟⢾⠁⠀⠀⣟⢮⠗⡇⠀⠀⠀⠀⠸⡘⣀⢧⠃⠀⠀⠀⠀⣇⢱⠀⢏⡀⠀⠀⠀⠀⠀⠀⢰⠁⢠⠁⢸⠀⠀
+⠀⠀⠃⠘⡀⠰⡀⠀⠀⢄⣀⡸⠃⠀⠀⠐⠀⣾⣭⠇⠀⠀⠀⢹⡺⢼⢃⠀⠀⣀⠔⠲⡍⠂⢸⠀⠀⠀⠀⠀⣿⠀⢣⠘⣧⠀⠀⠀⠀⠀⠀⡎⠀⡌⠀⠇⠀⠀
+⠀⠀⠸⠀⢇⠀⠱⡀⠀⠀⠀⠀⠀⠀⠐⠀⣼⡳⡞⠀⠀⠀⠀⢸⣝⣻⠾⠐⡡⢤⡀⢠⠇⠀⢢⣤⣀⣀⣀⣠⠟⠀⠈⢆⠹⣇⠀⠀⠀⠀⡸⠁⢰⠁⡘⠀⠀⠀
+⠀⠀⠀⡆⠘⡄⠁⢧⠀⠀⠀⠐⠀⠁⠀⢀⣿⢱⢇⠀⠀⠀⢀⡠⣟⠶⣿⣚⣶⢜⢗⠕⠀⠀⣼⣿⣿⠟⢿⣿⣧⠀⠀⢸⣀⣹⣆⠀⠀⡰⠁⣠⠃⠠⠁⠀⠀⠀
+⠀⠀⠀⠘⠄⠘⢄⠈⢆⠀⠀⠀⠀⠂⠀⢸⣷⡜⠘⡀⠀⣠⡫⠂⠸⣿⡽⡾⠓⠑⠙⠀⡀⠀⣿⣿⡇⡇⠈⢞⣿⡶⠀⠈⠿⢿⠟⡣⠚⢀⠕⠁⡐⠁⠀⠀⠀⠀
+⠀⠀⠀⠀⠈⠂⡈⠢⡀⠓⢄⠀⠀⠀⠀⣾⢣⡏⠆⢡⡰⡕⠁⠀⠀⠀⠀⠢⠀⠀⢠⠊⢀⣼⣽⣿⢽⠀⠀⠘⣿⣿⣧⠐⠈⠉⢁⣠⠔⠁⡠⠚⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠑⡄⠈⢢⡄⠑⣤⠀⠀⣿⠃⣯⠃⠈⠁⠀⠀⠀⠂⠀⡄⡖⢢⠀⢸⡇⠙⣿⣿⣿⡜⠀⠀⠀⢹⣿⣿⡇⠀⡕⠊⠀⡔⠈⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠈⠂⢄⠉⠒⠠⠁⢲⡯⣏⣯⠱⠀⠐⠈⠠⢀⠀⠂⠉⠀⠨⠂⠈⠢⠄⠂⠈⠁⠁⠀⠀⠀⣼⣿⡿⡅⠊⢠⠔⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠐⠂⠠⣀⣟⢖⠺⠀⠠⠁⠌⠀⠄⠂⠄⠒⠢⠤⠄⠀⠀⠀⠀⠀⠀⠀⠀⠤⠒⣿⣿⡇⡠⠒⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣨⣿⣹⣖⠠⢄⣀⠀⠃⠠⠈⠠⠐⠀⠄⠠⠁⠂⠄⠁⠐⠀⠁⣀⣀⢤⣷⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿⣿⣿⣿⠀⠀⠀⠉⠐⠂⠀⠀⠤⠤⠀⠤⠤⠀⠒⠒⠂⠉⠁⠀⠀⢸⠓⠛⠱⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠛⠛⠛⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠒⠒⠚⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+
+                    </pre>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // Function to set custom cursor
+    function setCursor() {
+      var cursor = document.createElement('img');
+      cursor.src = 'rick-wated.png';
+      cursor.classList.add('custom-cursor');
+      
+      // Add cursor to the document
+      document.body.appendChild(cursor);
+      
+      // Adjust cursor position based on mouse movement
+      document.addEventListener('mousemove', function(e) {
+        var cursorOffsetX = cursor.width / 2;
+        var cursorOffsetY = cursor.height / 2;
+        cursor.style.left = (e.clientX - cursorOffsetX) + 'px';
+        cursor.style.top = (e.clientY - cursorOffsetY) + 'px';
+      });
+    }
+  </script>
+
+</html>
